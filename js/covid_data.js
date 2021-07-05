@@ -31,6 +31,7 @@ function val(){
     document.getElementById("title").innerHTML="Loading..." ;
 var states=document.getElementById("states");
 var states_select=String(states.options[states.selectedIndex].value);
+var states_sel =String(states.options[states.selectedIndex].text);
 console.log(states_select);
  async function details(){
     const response = await fetch(api_url);
@@ -45,7 +46,6 @@ console.log(states_select);
         var beforeday=dayBfrYes;
      }
      
-
      console.log(covidtime);
      console.log(time);
     var confirmed = data[states_select]["dates"][covidtime]["total"]["confirmed"];
@@ -55,7 +55,7 @@ console.log(states_select);
     var dea = data[states_select]["dates"][beforeday]["total"]["deceased"];
     var reco = data[states_select]["dates"][beforeday]["total"]["recovered"];
   
-    document.getElementById("title").innerHTML=states_select ; 
+    document.getElementById("title").innerHTML=states_sel ; 
     document.getElementById("confirm").innerHTML="Confirmed Cases: "+confirmed ;
     document.getElementById("newconf").innerHTML= " +"+(confirmed-conf) ;
     document.getElementById("newconf").style.color='#2EFF2E';
