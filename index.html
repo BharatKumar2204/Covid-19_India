@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 India</title>
+    <link rel="icon" href="img/covid_img.png" sizes="16x16" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Varela&display=swap" rel="stylesheet">
+    
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/covid_data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/covid_css.css">
+</head>
+<body>
+    <nav>
+        <h1>C<img src="img/covid_img.png" width="27px">VID-19 Report</h1>
+    </nav>
+<h2>INDIA</h2>
+    <label for="states"><h3>Select a State or UT</h3></label>
+    <br>
+    <center>
+    <div class="custom-select">
+    <select size="4" id="states" >
+        <option value="null">Choose a state </option>
+        <option value="AP">Andhra Pradesh</option>
+        <option value="AN">Andaman and Nicobar Islands</option>
+        <option value="AR">Arunachal Pradesh</option>
+        <option value="AS">Assam</option>
+        <option value="BR">Bihar</option>
+        <option value="CH">Chandigarh</option>
+        <option value="CT">Chhattisgarh</option>
+        <option value="DN">Daman and Diu</option>
+        <option value="DL">Delhi</option>
+        
+        
+        <option value="GA">Goa</option>
+        <option value="GJ">Gujarat</option>
+        <option value="HR">Haryana</option>
+        <option value="HP">Himachal Pradesh</option>
+        <option value="JK">Jammu and Kashmir</option>
+        <option value="JH">Jharkhand</option>
+        <option value="KA">Karnataka</option>
+        <option value="KL" >Kerala</option>
+        <option value="LA">Ladakh</option>
+        <option value="LD">Lakshadweep</option>
+       
+        <option value="MH">Maharashtra</option>
+        <option value="MN">Manipur</option>
+        <option value="ML">Meghalaya</option>
+        <option value="MZ">Mizoram</option>
+        <option value="MP">Madhya Pradesh</option>
+        <option value="NL">Nagaland</option>
+        <option value="OR">Odisha</option>
+        <option value="PY">Puducherry</option>
+        <option value="PB">Punjab</option>
+        <option value="RJ">Rajasthan</option>
+        <option value="SK">Sikkim</option>
+        <option value="TN" selected>Tamil Nadu</option>
+        <option value="TG">Telangana</option>
+        <option value="TR">Tripura</option>
+        <option value="UP">Uttar Pradesh</option>
+        <option value="UT">Uttarakhand</option>
+        <option value="WB">West Bengal</option>
+    
+    </select>
+    </div>
+</center>
+<button id="view" onclick="val();">Check</button><br>
+<center><p id="if_false"></p></center>
+<div class="chart"><canvas id="myChart"></canvas> 
+   </div>
+    <span id="confirm"></span><p id="newconf"></p><span></span> 
+        <span id="death"></span><p id="newdea"></p><span></span>  
+        <span id="recover"></span><p id="newrec"></p> 
+     
+
+
+    
+    
+    
+    
+    <script src="js/select_dropdown.js"></script>
+    
+<footer>Built by : Bharat Kumar K | Lets get Vaccinated</footer>
+</body>
+</html>
