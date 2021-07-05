@@ -24,7 +24,7 @@ var beforeday
     var covidtime =yesterday;
  }
 
- 
+
 
 function val(){
 var states=document.getElementById("states");
@@ -42,12 +42,6 @@ console.log(states_select);
         var covidtime =yesterday;
         var beforeday=dayBfrYes;
      }
-     if(data[states_select]["dates"][covidtime]){
-        
-    }
-    else{
-        document.getElementById("if_false").innerHTML="Data for the particular state is not yet received";
-    }
      
 
      console.log(covidtime);
@@ -59,7 +53,7 @@ console.log(states_select);
     var dea = data[states_select]["dates"][beforeday]["total"]["deceased"];
     var reco = data[states_select]["dates"][beforeday]["total"]["recovered"];
   
-     
+    document.getElementById("title").innerHTML=states_select ; 
     document.getElementById("confirm").innerHTML="Confirmed Cases: "+confirmed ;
     document.getElementById("newconf").innerHTML= " +"+(confirmed-conf) ;
     document.getElementById("newconf").style.color='#2EFF2E';
@@ -111,7 +105,7 @@ console.log(states_select);
 
 details();  
 }
-
+ 
   
  
      
