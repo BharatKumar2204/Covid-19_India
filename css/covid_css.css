@@ -127,6 +127,7 @@ button{
      width: 100%;
      background-color: transparent;
      font-size: 15px;
+     -webkit-tap-highlight-color: transparent;
 }
 
 
