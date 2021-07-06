@@ -36,8 +36,11 @@ nav{
     background-color: black;
     border-bottom: 1px solid #37b9f1;
     z-index: 500;
-     
-    margin-top: 0;
+    border-top: 1px solid black;
+    margin-top: 0px 0px;
+}
+h1{
+  border-top: 1px solid black;
 }
 
 /***dropdown***/
@@ -119,18 +122,13 @@ nav{
 /*** check button ***/
 
 button{
-    background-color: #37b9f1;
-    color: white;
-    padding: 10px;
-    margin:15px;
-    outline: none;
-    width: 100px;
-    border: none;
+     border: 0px;
+     padding: 0px;
+     width: 100%;
+     background-color: transparent;
+     font-size: 15px;
 }
-button:active{
-    background-color: white;
-    color: #37b9f1;
-}
+
 
 /***details***/
  span::before {
@@ -187,7 +185,7 @@ footer{
     width: 60%;
   }
   nav{
-    margin-top: 5px;
+   
     margin-bottom: 5px;
   }
   h1{
@@ -206,7 +204,7 @@ footer{
     white-space: pre-line;
   }
   nav{
-    margin-top: 5px;
+  
     margin-bottom: 5px;
   }
   .custom-select{

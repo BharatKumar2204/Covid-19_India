@@ -55,7 +55,7 @@ console.log(states_select);
     var dea = data[states_select]["dates"][beforeday]["total"]["deceased"];
     var reco = data[states_select]["dates"][beforeday]["total"]["recovered"];
   
-    document.getElementById("title").innerHTML=states_sel ; 
+    document.getElementById("title").innerHTML="" ; 
     document.getElementById("confirm").innerHTML="Confirmed Cases: "+confirmed ;
     document.getElementById("newconf").innerHTML= " +"+(confirmed-conf) ;
     document.getElementById("newconf").style.color='#2EFF2E';
