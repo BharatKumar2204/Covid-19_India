@@ -27,7 +27,7 @@ h3{
 /***canvas**/
 .chart{
   width: 29%;
-  padding: 20px 0;
+  
    
 }
 
@@ -136,13 +136,11 @@ button:focus{
 
 
 /***details***/
- span::before {
-   content:'\A';
-   padding-left: 5px;
-    
-   
-    
- }
+span::before {
+  content:'\A';
+  padding-left: 5px;
+}
+ 
  p{
    display: inline;
  }
@@ -166,11 +164,22 @@ footer{
 }
 
 /***only laptop screen***/
-@media  screen and (min-width:1061px){
+@media  screen and (min-width:1344px){
 .chart{
    
-   vertical-align:middle;
+   vertical-align: middle;
    display: inline-block;
+   
+    
+}
+div.chart{
+  padding-right: 0px;
+}
+
+
+ 
+center{
+  margin-top: 20px;
 }
 
  
@@ -199,7 +208,7 @@ footer{
   }
 }
  /***tab screen***/
-@media  screen and (min-width:756px) and (max-width:1060px) {
+@media  screen and (min-width:756px) and (max-width:1343px) {
   .chart{
     width: 50%;
     padding: 20px 0;
