@@ -2,7 +2,7 @@ window.onload = function(){
     document.getElementById('view').click();
   }
  
-const api_url ='https://api.covid19india.org/v4/min/timeseries.min.json'; // api of covid-19
+const api_url ='https://data.covid19india.org/v4/min/timeseries.min.json'; // api of covid-19
 
 var today = new Date().toISOString().slice(0, 10);// today's date
 
