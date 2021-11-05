@@ -2,7 +2,7 @@ window.onload = function(){
     document.getElementById('view').click();
   }
  
-const api_url ='https://data.covid19india.org/v4/min/timeseries.min.json'; // api of covid-19
+const api_url ='https://data.covid19india.org/v4/min/data.min.json'; // api of covid-19
 
 var today = new Date().toISOString().slice(0, 10);// today's date
 
@@ -36,7 +36,7 @@ console.log(states_select);
  async function details(){
     const response = await fetch(api_url);
     const data = await response.json();
-     if(data[states_select]["dates"][covidtime]){
+ /*    if(data[states_select]["dates"][covidtime]){
         var covidtime=today;
         var beforeday=yesterday;
      }
@@ -47,32 +47,45 @@ console.log(states_select);
      }
      console.log(beforeday);
      console.log(covidtime);
-     console.log(time);
-    var confirmed = data[states_select]["dates"][covidtime]["total"]["confirmed"];
-    var death = data[states_select]["dates"][covidtime]["total"]["deceased"];
-    var recovered = data[states_select]["dates"][covidtime]["total"]["recovered"];
-    var conf = data[states_select]["dates"][beforeday]["total"]["confirmed"];
-    var dea = data[states_select]["dates"][beforeday]["total"]["deceased"];
-    var reco = data[states_select]["dates"][beforeday]["total"]["recovered"];
+     console.log(time);  */
+     console.log(data[states_select]);
+    var confirmed = data[states_select]
+    //["dates"][covidtime]
+    ["total"]["confirmed"];
+    var death = data[states_select]
+    //["dates"][covidtime]
+    ["total"]["deceased"];
+    var recovered = data[states_select]
+    //["dates"][covidtime]
+    ["total"]["recovered"];
+    var conf = data[states_select]
+    //["dates"][beforeday]
+    ["total"]["confirmed"];
+    var dea = data[states_select]
+    //["dates"][beforeday]
+    ["total"]["deceased"];
+    var reco = data[states_select]
+    //["dates"][beforeday]
+    ["total"]["recovered"];
     var act =confirmed-recovered-death;
     console.log(confirmed-recovered-death);
     document.getElementById("title").innerHTML="" ; 
     document.getElementById("confirm").innerHTML="Confirmed Cases: "+confirmed ;
-    document.getElementById("newconf").innerHTML= " +"+(confirmed-conf) ;
+    //document.getElementById("newconf").innerHTML= " +"+(confirmed-conf) ;
     document.getElementById("newconf").style.color='#2EFF2E';
-    document.getElementById("newdea").innerHTML= " +"+(death-dea) ;
+    //document.getElementById("newdea").innerHTML= " +"+(death-dea) ;
     document.getElementById("newdea").style.color='red';
-    document.getElementById("newrec").innerHTML= " +"+(recovered-reco) ;
+    //document.getElementById("newrec").innerHTML= " +"+(recovered-reco) ;
     document.getElementById("newrec").style.color='#2EFF2E';
     document.getElementById("active").innerHTML="Active Cases: "+(act);
-    document.getElementById("act").innerHTML= " "+((act)-(conf-dea-reco)) ;
-    if((act)-(conf-dea-reco)<0){
+    //document.getElementById("act").innerHTML= " "+((act)-(conf-dea-reco)) ;
+   /* if((act)-(conf-dea-reco)<0){
         document.getElementById("act").style.color='#2EFF2E';
     }
     else{
         document.getElementById("act").innerHTML= " +"+((act)-(conf-dea-reco)) ;
         document.getElementById("act").style.color='red';
-    }
+    }*/
     document.getElementById("death").innerHTML="Total Death: "+death ;
     document.getElementById("recover").innerHTML="Recovered Cases: "+recovered ;
  
